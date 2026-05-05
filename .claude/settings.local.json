@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Process | Where-Object { $_.Name -match \"git\" } | Select-Object Id, Name, MainWindowTitle)"
+    ]
+  }
+}

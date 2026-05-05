@@ -1,0 +1,1 @@
+all these btns shld work! if video on then show teh video in that proper box and cut the clall then proper animations and again go into call after 5 sec as its the feature we shld shwow ryt ! and pomorodo timer really functional unit i wnat in that small box ! proper ui ux , those mute,video on,end call tehse i am spekaing! in landing page!!

@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 23, 21, 36;
+  --background-rgb: 248, 248, 255;
+  --surface-rgb: 255, 255, 255;
+  --border-rgb: 229, 226, 241;
+  --muted-rgb: 91, 88, 109;
+
+  --cursor-bg: #141225;
+  --cursor-surface: #1d1a2f;
+  --cursor-elevated: #27223d;
+  --cursor-hover: #302a4b;
+  --cursor-active: #3a3259;
+  --cursor-border: #3b3656;
+  --cursor-border-hover: #4a4468;
+  --cursor-divider: #2b2742;
+  --cursor-text-primary: #f5f5ff;
+  --cursor-text-secondary: #c8c5da;
+  --cursor-text-tertiary: #9f9ab8;
+  --cursor-text-disabled: #8580a4;
+  --button-radius: 12px;
+}
+
+.dark {
+  --foreground-rgb: 245, 245, 255;
+  --background-rgb: 20, 18, 37;
+  --surface-rgb: 29, 26, 47;
+  --border-rgb: 59, 54, 86;
+  --muted-rgb: 200, 197, 218;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f8f8fa;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dark body {
+  background: var(--cursor-bg);
+  color: var(--cursor-text-primary);
+}
+
+.btn-press:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.25);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.4);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--cursor-border);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--cursor-border-hover);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-corner {
+  background: var(--cursor-bg);
+}
+
+.whiteboard-canvas {
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+
+.tracking-tight-apple {
+  letter-spacing: -0.02em;
+}
+
+.tracking-tighter-apple {
+  letter-spacing: -0.03em;
+}
+
+.frosted {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.dark .frosted {
+  background: rgba(39, 34, 61, 0.84);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.cursor-surface {
+  background: var(--cursor-surface);
+  border: 1px solid var(--cursor-border);
+}
+
+.cursor-elevated {
+  background: var(--cursor-elevated);
+  border: 1px solid var(--cursor-border);
+}
+
+.cursor-hover {
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cursor-hover:hover {
+  background: var(--cursor-hover);
+  border-color: var(--cursor-border-hover);
+}
+
+.cursor-focus:focus-visible {
+  outline: 2px solid #7367f0;
+  outline-offset: 2px;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+}
+
+.border-cursor {
+  border-color: var(--cursor-border);
+}
+
+.border-cursor-hover:hover {
+  border-color: var(--cursor-border-hover);
+}
+
+::selection {
+  background: rgba(115, 103, 240, 0.25);
+}
+
+.dark ::selection {
+  background: rgba(191, 231, 255, 0.3);
+}
+
+/* Global button shape normalization: remove pill/oval buttons site-wide. */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-radius: var(--button-radius);
+}
+
+button.rounded-full,
+button[class*="rounded-[9999px]"],
+button.rounded-pill,
+input[type="button"].rounded-full,
+input[type="submit"].rounded-full,
+input[type="reset"].rounded-full {
+  border-radius: var(--button-radius) !important;
+}
