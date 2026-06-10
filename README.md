@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/readme/banner.png" alt="studymeet banner" width="100%"/>
+</p>
+
 # Meet&Study
 
 A focused, distraction-free study room where exactly two students can join, video call, collaborate on a shared whiteboard, track their session goals, and keep each other accountable — all in real time.
@@ -186,3 +190,6 @@ convex deploy
 ## License
 
 MIT — Built for students who are tired of studying alone.
+<p align="center">
+  <img src="assets/readme/footer.png" alt="studymeet footer" width="700"/>
+</p>
